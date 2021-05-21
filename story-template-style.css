@@ -1,0 +1,33 @@
+
+body {
+    display: grid;    
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows: 0.2fr 2.5fr 0.3fr;
+    grid-template-areas: 
+    "header header"
+    "aside article"
+    "footer footer"
+    ;
+    margin: 10px;
+}
+
+header {
+    grid-area: header;
+    border: 1px solid black ;
+}
+
+aside {
+    grid-area: aside;
+    border: 1px solid black ;
+}
+
+article {
+    grid-area: article;
+    border: 1px solid black ;
+    overflow:scroll;
+}
+
+footer {
+    grid-area: footer;
+    border: 1px solid black ;
+}
