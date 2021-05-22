@@ -17,7 +17,7 @@ h4 {
 body {
     display: grid;    
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.7fr .1fr 2fr 1.5fr 0.4fr;
+    grid-template-rows: 0.7fr .1fr 2fr 1.5fr 0.2fr;
     grid-template-areas: 
     "header header header"
     "nav nav nav"
