@@ -1,10 +1,10 @@
 
 body {
     display: grid;    
-    grid-template-columns: 0.3fr 1fr;
-    grid-template-rows: 0.2fr 2.5fr 0.3fr;
+    grid-template-columns: 0.3fr 2fr;
+    grid-template-rows: 0.5fr 2.5fr 0.3fr;
     grid-template-areas: 
-    "header header"
+    "aside header"
     "aside article"
     "footer footer"
     ;
@@ -14,20 +14,25 @@ body {
 header {
     grid-area: header;
     border: 1px solid black ;
+    padding: 5px;
 }
 
 aside {
     grid-area: aside;
     border: 1px solid black ;
+    padding: 5px;
 }
 
 article {
     grid-area: article;
     border: 1px solid black ;
     overflow:scroll;
+    padding: 15px;
 }
 
 footer {
     grid-area: footer;
     border: 1px solid black ;
+    padding: 5px;
+
 }
