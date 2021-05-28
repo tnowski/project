@@ -22,6 +22,7 @@ header {
     padding-left: 10px;
 }
 
+
 nav {
     grid-area: nav;
     border: 1px solid black;
@@ -67,6 +68,15 @@ nav > a:hover {
     opacity: 70%;
     width: 50%;
   }
+
+.overlay > a {
+    color: #FBFAEF;
+}
+
+.overlay:hover {
+    opacity: 90%;
+    
+}
 
 img {
     height: 300px;

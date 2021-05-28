@@ -1,26 +1,57 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Playfair+Display&display=swap');
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 100;
+}
+
+h2 {
+    font-weight: 200;
+}
+
 body {
     display: grid;    
     grid-template-columns: 0.3fr 2fr;
-    grid-template-rows: 0.5fr 2.5fr 0.3fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
     grid-template-areas: 
     "aside header"
     "aside article"
     "footer footer"
     ;
-    margin: 10px;
+    margin: 0px;
+    background-color: #FBFAEF;
 }
 
 header {
     grid-area: header;
-    border: 1px solid black ;
     padding: 5px;
+    border-bottom: 5px solid #6D98BA;
 }
 
 aside {
     grid-area: aside;
     border: 1px solid black ;
     padding: 5px;
+    padding-left: 15px;
+    background-color: #0E273C;
+}
+
+aside > a {
+
+    color: #FBFAEF;   
+}
+
+aside > a:hover {
+    text-underline-offset: 3px;
 }
 
 article {
@@ -32,7 +63,17 @@ article {
 
 footer {
     grid-area: footer;
-    border: 1px solid black ;
     padding: 5px;
+    grid-area: footer;
+    background-color: #786452;
+    padding-bottom: 10px;
+    text-align: center;
+}
 
+footer > a  {
+    color: #FBFAEF;
+}
+
+footer > a:hover {
+    text-underline-offset: 3px;
 }
