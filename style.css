@@ -17,7 +17,7 @@ h4 {
 body {
     display: grid;    
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.7fr .1fr 2fr 1.5fr 0.2fr;
+    grid-template-rows: 0.3fr .1fr 2fr 1.5fr 0.2fr;
     grid-template-areas: 
     "header header header"
     "nav nav nav"
@@ -25,8 +25,8 @@ body {
     "main main main"
     "footer footer footer"
     ;
-    margin: 10px;
     background-color: #FBFAEF;
+    margin: 0px;
 }
 
 header {
@@ -34,6 +34,7 @@ header {
     border: 1px solid black;
     padding: 5px;
     grid-area: header;
+    padding-left: 15px;
 }
 
 nav {
@@ -41,11 +42,15 @@ nav {
     border: 1px solid black;
     display: flex;
     flex-direction: row;
+    background-color: #0E273C;
+    padding-left: 15px;
+    justify-content: right;
 }
 
 nav > a {
     margin-right: 15px;
-    margin-left: 5px;
+    margin-left: 15px;
+    color: #FBFAEF;   
 }
 
 nav > a:hover {
@@ -54,8 +59,8 @@ nav > a:hover {
 
 #about {
     grid-area: about;
-    border: 1px solid black;
     min-height: 300px;
+    padding-left: 15px;
 }
 
 main {
@@ -67,17 +72,19 @@ main {
     "writing editing other"
     ;
     min-height: 450px;
+    justify-content:space-between;
 }
 
 .writing {
     grid-area: writing;
-    border: 1px solid black;
+    border: 5px solid #0E273C;
     padding: 5px;
+    margin-left: 10px;
 }
 
 .editing {
     grid-area: editing;
-    border: 1px solid black;
+    border: 5px solid #0E273C;
     margin-right: 10px;
     margin-left: 10px;
     padding: 5px;
@@ -86,17 +93,27 @@ main {
 
 .other {
     grid-area: other;
-    border: 1px solid black;
+    border: 5px solid #0E273C;
     padding: 5px;
     margin-right: 10px;
 
 }
 
 footer {
+    margin-top: 10px;
     grid-area: footer;
     border: 1px solid black;
+    background-color: #786452;
+    padding: 5px;
+    text-align: center;
 }
 
-@media screen {
-    
+footer > h5 {
+    color: #FBFAEF;
 }
+
+footer > h5 > a > i {
+    font-size: 2em;
+    color: #FBFAEF;
+}
+

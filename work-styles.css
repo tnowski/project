@@ -1,1 +1,123 @@
-/* examples of work in a flexbox display (cards) and potentially a featured story at the top
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Libre+Baskerville&family=Playfair+Display&display=swap');
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+body {
+    background-color: #FBFAEF;
+    margin: 0px;
+}
+
+header {
+    padding-left: 10px;
+}
+
+nav {
+    grid-area: nav;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    background-color: #0E273C;
+    padding-left: 15px;
+    justify-content: right;
+    padding-right: 10px;
+}
+
+nav > a {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: #FBFAEF;   
+}
+
+nav > a:hover {
+    text-underline-offset: 3px;
+}
+
+.cards {
+    padding-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5px;
+}
+
+.card {
+    width: 23%;
+    padding: 10px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color:  #171718;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 70%;
+    width: 50%;
+  }
+
+img {
+    height: 300px;
+    width: 100%;
+}
+
+.card:hover {
+    border: solid 1px black;
+}
+
+footer {
+    margin-top: 10px;
+    grid-area: footer;
+    border: 1px solid black;
+    background-color: #786452;
+    padding: 5px;
+    text-align: center;
+}
+
+footer > h5 {
+    color: #FBFAEF;
+}
+
+footer > h5 > a > i {
+    font-size: 2em;
+    color: #FBFAEF;
+}
+
+@media screen and (max-width: 1400px) {
+    .card {
+        width: 31%;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 45%;
+        padding: 10px;
+    }
+    .image-div {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 100%;
+        padding: 10px;
+    }
+    .image-div {
+        height: 450px;
+    }
+}
