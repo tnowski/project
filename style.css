@@ -115,6 +115,11 @@ main {
     margin-right: 10px;
 }
 
+
+main > section > a {
+    color: black;
+}
+
 .writing {
     grid-area: writing;
     border: 5px solid #6D98BA;
@@ -137,6 +142,48 @@ main {
     padding: 5px;
     margin-right: 10px;
 
+}
+
+.card {
+    width: 23%;
+    padding: 10px;
+    position: relative;
+    justify-content: right;
+}
+
+main > section > section > div > img {
+    height: 350px;
+    width: 400px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 200px;
+    /* left: 100px;  */
+    background-color:  #171718;
+    color: white;
+    opacity: 70%;
+    width: 400px;
+    justify-content: bottom;
+    padding-bottom: 10px;
+  }
+
+.overlay > h3 {
+    padding-left: 10px;
+}
+
+.overlay > a > h2 {
+    padding-left: 10px;
+}
+
+main > section > section > div > a {
+    color: #FBFAEF;
+}
+
+.overlay:hover {
+    opacity: 90%;
+    
 }
 
 footer {

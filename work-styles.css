@@ -16,12 +16,52 @@ h4 {
 body {
     background-color: #FBFAEF;
     margin: 0px;
+    display: grid;
+    grid-template-rows: 5% 5% 25% 25% 25% 5%;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "writing"
+    "editing"
+    "other"
+    "footer"
+    ;
+}
+
+#writing {
+    grid-area: writing;
+}
+
+#editing {
+    grid-area: editing;
+}
+
+#other {
+    grid-area: other;
+}
+
+.subtitle {
+    height: 60px;
+    padding-left: 20px;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.subtitle > h2 {
+    border: 5px solid #6D98BA;
+    display: inline;
+    padding: 5px;
 }
 
 header {
     padding-left: 10px;
+    grid-area: header;
+    min-height:50px;
 }
 
+header > h1 {
+    padding-left: 10px;
+}
 
 nav {
     grid-area: nav;
@@ -32,6 +72,8 @@ nav {
     padding-left: 15px;
     justify-content: right;
     padding-right: 10px;
+    grid-area: nav;
+    /* height: 50px; */
 }
 
 nav > a {
@@ -48,7 +90,7 @@ nav > a:hover {
     padding-top: 5px;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 .card {
@@ -59,14 +101,14 @@ nav > a:hover {
 
 .overlay {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 50px;
     background-color:  #171718;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     opacity: 70%;
-    width: 50%;
+
   }
 
 .overlay > a {
@@ -84,13 +126,12 @@ img {
 }
 
 .card:hover {
-    border: solid 1px black;
+    border: solid 2px #6D98BA;
 }
 
 footer {
     margin-top: 10px;
     grid-area: footer;
-    border: 1px solid black;
     background-color: #786452;
     padding: 5px;
     text-align: center;
