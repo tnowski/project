@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swapfamily=Lato:wght@300&family=Libre+Baskerville&family=Playfair+Display&display=swap');
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 100;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+body {
+    display: grid;    
+    grid-template-columns: 0.4fr 2fr;
+    grid-template-rows: 0.2fr 9fr 0.1fr;
+    grid-template-areas: 
+    "aside header"
+    "aside article"
+    "footer footer"
+    ;
+    margin: 0px;
+    background-color: #FBFAEF;
+}
+
+header {
+    grid-area: header;
+    padding: 5px;
+    border-bottom: 5px solid #6D98BA;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+header > h3 {
+    font-weight: 300;
+}
+
+aside {
+    grid-area: aside;
+    padding: 5px;
+    padding-left: 15px;
+    background-color: #0E273C;
+}
+aside > a > h3 {
+    font-weight: 300;
+}
+
+aside > a {
+
+    color: #FBFAEF;   
+}
+
+aside > a:hover {
+    text-underline-offset: 3px;
+}
+
+article {
+    grid-area: article;
+    overflow:scroll;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 5px;
+    grid-area: footer;
+    background-color: #786452;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+footer > a  {
+    color: #FBFAEF;
+}
+
+footer > a:hover {
+    text-underline-offset: 3px;
+}
+
+.subtitle {
+    height: 60px;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.subtitle > h3 {
+    border: 5px solid #6D98BA;
+    display: inline;
+    padding: 10px;
+
+}
+
+/* section styling */
+
+/* #intro {
+    /* background-color: burlywood; */
+
+
+#background {
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+#octopus {
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+#psych {
+
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+#lit {
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+#ai {
+    padding-top: 400px;
+    padding-bottom: 400px;
+}
+
+#conclusion {
+
+    padding-top: 400px;
+    padding-bottom: 200px;
+}
+
+.library {
+    background-image: url(books-2.jpg);
+}
+
+.ocean {
+    background-color: cornflowerblue;
+    background-image: url(wave.png); 
+}
+.ocean > section > h4 {
+    background-color: blanchedalmond;
+    padding: 10px;
+    border-radius: 5px;
+    border: 8px solid  #6D98BA;
+}
+
+.ocean > section > div > h3 {
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    padding: 10px;
+    border: 8px solid #6D98BA;
+}
+
+#starburst {
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    z-index: 1;
+}
+
+.psychedelic {
+    background-image: radial-gradient(closest-side, #3f87a6,#9198e5, #f69d3c);
+}
+
+.robot {
+    background-color: #eeeeee;
+    background-image: url(circuitboard.png);
+}
+
+.final {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.beginning {
+    background-color: #FBFAEF;
+}
+
+@keyframes wave {
+    from {left: -40%;  width: 300px;}
+    to {left: 100%; width: 0px;}
+}
+
+
+#wave {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    top:0%;
+    left:-40%;
+    animation-name: wave;
+    animation-duration: 8s;
+}
+
+@keyframes come-in {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+#title-div {
+    opacity: 0%;
+    animation-name: come-in;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes brain {
+    from {left: 120%; top: -40%;}
+    to {left: 40%; top:30%;}
+}
+
+@keyframes get-out {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+#brain-pic {
+    height: 200px;
+    width: 250px;   
+    left: 120%;
+    position: relative;
+}
+
+#brain-div {
+    opacity: 0%;
+}
+
+#octopus-arm {
+    height: 300px;
+    width: 700px;
+    position: absolute;
+    right: 0%;
+    opacity: 100%;
+}
+
