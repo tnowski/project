@@ -6,11 +6,6 @@ const psychTarget = document.querySelector('#psych')
 const aiTarget = document.querySelector('#ai')
 const conclusionTarget = document.querySelector('#conclusion')
 
-// const brainTarget = document.querySelector('#brainboi');
-// const brainOptions = {
-//   threshold: 1.0
-// }
-
 const options = {
   threshold: 0.4,
 }
@@ -32,7 +27,7 @@ function handleIntersectionBackground(entries) {
       document.querySelector("#brain-pic").style.animationDuration = "8s";
       document.querySelector("#brain-pic").style.animationFillMode = "forwards";
       document.querySelector('#brain-div').style.animationName = "come-in";
-      document.querySelector("#brain-div").style.animationDuration = "12s";
+      document.querySelector("#brain-div").style.animationDuration = "8s";
       document.querySelector("#brain-div").style.animationTimingFunction = "ease-in"
       document.querySelector("#brain-div").style.animationFillMode = "forwards";
     }
@@ -65,6 +60,16 @@ function handleIntersectionLit(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
       document.querySelector("article").className = "library";
+      document.querySelector('#books').style.animationName = "book-slide";
+      document.querySelector("#books").style.animationDuration = "5s";
+      document.querySelector("#books").style.animationFillMode = "forwards";
+      document.querySelector('#books').style.animationName = "book-slide";
+      document.querySelector("#books").style.animationDuration = "5s";
+      document.querySelector("#books").style.animationFillMode = "forwards";
+      document.querySelector('#books-2').style.animationName = "book-slide-2";
+      document.querySelector("#books-2").style.animationDuration = "5s";
+      document.querySelector("#books-2").style.animationDelay = "1s";
+      document.querySelector("#books-2").style.animationFillMode = "forwards";
     }
   });
 }
@@ -81,19 +86,12 @@ function handleIntersectionConclusion(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
       document.querySelector("article").className = "final";
+      document.querySelector('#conclusion').style.animationName = "text-in";
+      document.querySelector("#conclusion").style.animationDuration = "10s";
+      document.querySelector("#conclusion").style.animationFillMode = "forwards";
     }
   });
 }
-
-// const observerBrain = new IntersectionObserver(handleIntersectionBrain, options);
-
-// function handleIntersectionBrain(entries) {
-//   entries.map((entry) => {
-//     if (entry.isIntersecting) {
-//       document.querySelector("#smartboi").className = "brain";
-//     }
-//   });
-// }
 
 const observerBackground = new IntersectionObserver(handleIntersectionBackground, options);
 const observerLit = new IntersectionObserver(handleIntersectionLit, options);
@@ -110,7 +108,6 @@ observerOctopus.observe(octopusTarget);
 observerPsych.observe(psychTarget);
 observerAI.observe(aiTarget);
 observerConclusion.observe(conclusionTarget);
-// observerBrain.observe(brainTarget);
 
 
 

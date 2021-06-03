@@ -102,9 +102,6 @@ footer > a:hover {
 
 /* section styling */
 
-/* #intro {
-    /* background-color: burlywood; */
-
 
 #background {
 
@@ -173,9 +170,22 @@ footer > a:hover {
     background-image: radial-gradient(closest-side, #3f87a6,#9198e5, #f69d3c);
 }
 
+@keyframes photo {
+    0% {background-image: url(circuitboard.png);}
+    10% {background-image: url(circuitboard-edit.png);}
+    20% {background-image: url(circuitboard.png);}
+    30% {background-image: url(circuitboard-edit.png);}
+    40% {background-image: url(circuitboard.png);}
+    50% {background-image: url(circuitboard-edit.png);}
+    60% {background-image: url(circuitboard.png);}
+}
+
 .robot {
     background-color: #eeeeee;
     background-image: url(circuitboard.png);
+    animation-name: photo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards ;
 }
 
 .final {
@@ -186,6 +196,8 @@ footer > a:hover {
 .beginning {
     background-color: #FBFAEF;
 }
+
+/* animations */
 
 @keyframes wave {
     from {left: -40%;  width: 300px;}
@@ -217,7 +229,7 @@ footer > a:hover {
 }
 
 @keyframes brain {
-    from {left: 120%; top: -40%;}
+    from {left: 80%; top: -40%;}
     to {left: 40%; top:30%;}
 }
 
@@ -229,7 +241,7 @@ footer > a:hover {
 #brain-pic {
     height: 200px;
     width: 250px;   
-    left: 120%;
+    left: 80%;
     position: relative;
 }
 
@@ -245,3 +257,31 @@ footer > a:hover {
     opacity: 100%;
 }
 
+@keyframes text-in {
+    from {color: black;}
+    to {color: blanchedalmond}
+}
+
+@keyframes book-slide {
+    from {left: 80%;}
+    to {left: 25%;}
+}
+
+#books {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 25%;
+}
+
+@keyframes book-slide-2 {
+    from {left: 90%;}
+    to {left: 35%;}
+}
+
+#books-2 {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 90%;
+}
